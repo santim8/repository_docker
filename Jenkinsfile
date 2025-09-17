@@ -9,5 +9,12 @@ pipeline {
                 echo 'echo Test' 
             }
         }
+        stage ('Prune Docker data') {
+            steps {
+                bat 'docker compose up -d --no-color --wait'
+                bat 'docker images'
+                bat 'docker compose ps'
+            }
+        }
     }
 }
