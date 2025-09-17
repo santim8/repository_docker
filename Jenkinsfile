@@ -14,7 +14,7 @@ pipeline {
                 bat 'docker compose up -d --no-color --wait'
                 bat 'docker images'
                 bat 'docker compose ps'
-                bat 'docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword'
+                bat 'docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword'
             }
         }
     }
