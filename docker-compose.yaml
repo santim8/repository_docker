@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: my-jenkins-docker:latest
+    image: jenkins/jenkins:lts-jdk17 
     container_name: jenkins
     ports:
       - "8081:8080"
